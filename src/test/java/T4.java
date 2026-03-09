@@ -18,7 +18,7 @@ class VerificareTitlu {
     @Test
     public void verificaTitlu() {
         String titlu = driver.getTitle();
-        System.out.printf("Titlul este" + titlu);
+        System.out.printf("Titlul este:" + "" + titlu);
 
         Assert.assertNotNull(titlu);
         Assert.assertTrue(titlu.contains("prydwen"), "Titlul paginii ar trebui sa contina 'prydwen'");
