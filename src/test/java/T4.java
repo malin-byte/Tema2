@@ -12,16 +12,16 @@ class VerificareTitlu {
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
-        driver.get("https://www3.fsonline.app/seriale/");
+        driver.get("https://www.prydwen.gg");
     }
 
     @Test
     public void verificaTitlu() {
         String titlu = driver.getTitle();
-        System.out.printf("Titlul este" +" "+ titlu);
+        System.out.printf("Titlul este" + titlu);
 
         Assert.assertNotNull(titlu);
-        Assert.assertTrue(titlu.contains("Seriale Online Subtitrate"));
+        Assert.assertTrue(titlu.contains("prydwen"), "Titlul paginii ar trebui sa contina 'prydwen'");
     }
 
     @AfterMethod
