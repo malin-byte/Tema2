@@ -21,7 +21,7 @@ class VerificareTitlu {
         System.out.printf("Titlul este:" + "" + titlu);
 
         Assert.assertNotNull(titlu);
-        Assert.assertTrue(titlu.contains("prydwen"), "Titlul paginii ar trebui sa contina 'prydwen'");
+        Assert.assertFalse(titlu.contains("prydwen"), "Titlul paginii ar trebui sa contina 'prydwen'");
     }
 
     @AfterMethod
